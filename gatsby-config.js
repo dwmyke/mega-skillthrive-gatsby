@@ -20,7 +20,8 @@ module.exports = {
         name: `projects`,
         path: `${__dirname}/src/projects`
       },
-    },{
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -29,6 +30,20 @@ module.exports = {
     },
   `gatsby-plugin-sharp`,
   `gatsby-transformer-sharp`,
+  {
+    resolve: `gatsby-plugin-mdx`,
+    options: {
+      extensions: [`.md`, `.mdx`],
+      gatsbyRemarkPlugins: [
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            maxWidth: 1200,
+          },
+        },
+      ],
+    },
+  },
   ],
   
 

@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { FooterWrapper, FooterSocialWrapper, FooterSocialIcons } from "../elements"
+import { FooterWrapper, FooterSocialWrapper, FooterSocialIcons, P,  } from "../elements"
 
 export const Footer = () => {
 
@@ -43,7 +43,7 @@ query {
                     <img src={data.youtube.publicURL} alt="YouTube logo" />
                 </a>
             </FooterSocialIcons>
-            <p>&copy; {new Date().getFullYear()} Mega Ultra Studios</p>
+            <P size="xSmall" color="dark3">&copy; {new Date().getFullYear()} Mega Ultra Studios</P>
         </FooterSocialWrapper>
         </FooterWrapper>
     )
